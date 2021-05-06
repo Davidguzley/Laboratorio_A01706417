@@ -7,8 +7,13 @@ def padding(image, padded_size):
     image_row, image_col = image.shape #asigna alto y ancho de la imagen 
 
     padded_image = np.zeros((image_row + padded_size*2, image_col + padded_size*2)) #matriz de imagen con padding en zeros
+    print("Padded image zeros:")
+    print(padded_image)
 
     padded_image[padded_size:padded_size + image_row, padded_size:padded_size + image_col] = image #matriz de imagen con padding
+    print("Padded image:")
+    print(padded_image)
+
     
     return padded_image
 
@@ -25,5 +30,12 @@ if __name__ == '__main__':
     #Tamaño de padding
     padded_size = 1
 
+    #Impresion de entradas
+    print("Orignal Matrix:")
+    print(image)
+
+    print("Tamaño de padding:")
+    print(padded_size)
+
     #LLamamos a la funcion
-    print(padding(image, padded_size))
+    padding(image, padded_size)
