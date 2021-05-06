@@ -73,3 +73,6 @@ if __name__ == '__main__':
     print(image)
     print("Filter:")
     print(filter)
+
+    #LLamamos a la funcion
+    convolution(image, filter)
