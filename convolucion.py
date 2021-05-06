@@ -4,7 +4,7 @@ code taken from https://github.com/adeveloperdiary/blog/tree/master/Computer_Vis
 blog http://www.adeveloperdiary.com/data-science/computer-vision/how-to-implement-sobel-edge-detection-using-python-from-scratch/
 Modified by David Guzmán
 """
-
+#Librerias
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
@@ -12,13 +12,13 @@ import matplotlib.pyplot as plt
 def conv_helper(fragment, kernel):
     """ multiplica 2 matices y devuelve su suma"""
     
-    f_row, f_col = fragment.shape #asigna alto y ancho del fragmento
+    f_row, f_col = fragment.shape #asigna el alto y ancho del fragmento
     
-    result = 0.0
+    resultado = 0
     for row in range(f_row):
         for col in range(f_col):
-            result += fragment[row,col] *  kernel[row,col]
-    return result
+            resultado += fragment[row,col] *  kernel[row,col]
+    return resultado
 
 def convolution(image, kernel):
     """Aplica una convolucion sin padding (valida) de una dimesion 
@@ -54,5 +54,11 @@ if __name__ == '__main__':
     filter = np.array([[1,1,1],
                       [0,0,0],
                       [2,10,3]])
-    
+                      
+    #Impresion de entradas y salidas
+    print("Orignal Matrix:")
+    print(image)
+    print("Filter:")
+    print(filter)
+    print("Valid Convolution:")
     print(convolution(image,filter))
