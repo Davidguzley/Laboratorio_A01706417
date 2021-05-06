@@ -23,12 +23,14 @@ def conv_helper(fragment, kernel):
 def convolution(image, kernel):
     """Aplica una convolucion sin padding de dos matrices
     """
-    if len(image.shape) == 3:
-        print("Found 3 Dimensions: {}".format(image.shape))
-        image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        print("Converted to Gray Chanel. Shape {}".format(image.shape))
+
+    #Se encuentra la dimencion de la imagen
+    if len(image.shape) == 3: #De 3 dimenciones
+        print("Dimenciones de imagen: {}".format(image.shape))
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) #Se cambia a dos dimenciones
+        print("Nuevas dimenciones: {}".format(image.shape))
     else:
-        print("Image Shape: {}".format(image.shape))
+        print("Dimenciones de imagen: {}".format(image.shape))
 
     image_row, image_col = image.shape #asigna alto y ancho de la imagen 
     kernel_row, kernel_col = kernel.shape #asigna alto y ancho del filtro
@@ -46,7 +48,7 @@ def convolution(image, kernel):
     
     # Se muestra la imagen en pantalla
     plt.imshow(output, cmap='gray')
-    plt.title("Output Image Using {}X{} Kernel".format(kernel_row, kernel_col))
+    plt.title("Edge detection")
     plt.show()
 
     return output
