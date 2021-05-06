@@ -21,9 +21,14 @@ def conv_helper(fragment, kernel):
     return resultado
 
 def convolution(image, kernel):
-    """Aplica una convolucion sin padding (valida) de una dimesion 
-    y devuelve la matriz resultante de la operación
+    """Aplica una convolucion sin padding de dos matrices
     """
+    if len(image.shape) == 3:
+        print("Found 3 Dimensions: {}".format(image.shape))
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        print("Converted to Gray Chanel. Shape {}".format(image.shape))
+    else:
+        print("Image Shape: {}".format(image.shape))
 
     image_row, image_col = image.shape #asigna alto y ancho de la imagen 
     kernel_row, kernel_col = kernel.shape #asigna alto y ancho del filtro
@@ -38,27 +43,31 @@ def convolution(image, kernel):
             output[row, col] = conv_helper(
                                 image[row:row + kernel_row, 
                                 col:col + kernel_col], kernel)
+    
+    # Se muestra la imagen en pantalla
+    plt.imshow(output, cmap='gray')
+    plt.title("Output Image Using {}X{} Kernel".format(kernel_row, kernel_col))
+    plt.show()
 
     return output
 
 if __name__ == '__main__':
 
-    #Se define la matriz de la imagen
-    image = np.array([[1,2,3,4,5,6],
-                     [7,8,9,10,11,12],
-                     [0,0,1,16,17,18],
-                     [0,1,0,7,23,24],
-                     [1,7,6,5,4,3]])
+    #Se obtiene la imagen con cv2
+    image = cv2.imread("spiderman.jpg")
 
     #Se define la matriz del filtro
-    filter = np.array([[1,1,1],
-                      [0,0,0],
-                      [2,10,3]])
+    filter = np.array([[-1, 0, 1],
+                      [-2, 0, 2],
+                      [-1, 0, 1]])
                       
     #Impresion de entradas y salidas
-    print("Orignal Matrix:")
+    """print("Orignal Matrix:")
     print(image)
     print("Filter:")
     print(filter)
     print("Valid Convolution:")
-    print(convolution(image,filter))
+    print(convolution(image,filter))"""
+
+    #Mandamos a llamar la funcion
+    convolution(image,filter)
