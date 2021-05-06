@@ -21,21 +21,24 @@ def conv_helper(fragment, kernel):
     return resultado
 
 def convolution(image, kernel):
+    """Aplica una convolucion con padding de dos matrices
+    """
 
-    image_row, image_col = image.shape 
-    kernel_row, kernel_col = kernel.shape 
+    image_row, image_col = image.shape #asigna alto y ancho de la imagen 
+    kernel_row, kernel_col = kernel.shape #asigna alto y ancho del filtro
 
-    output_x = (image_col - (kernel_col / 2) * 2) + 1 
-    output_y = (image_row - (kernel_row / 2) * 2) + 1 
+    output_x = (image_col - (kernel_col / 2) * 2) + 1 #asigna el ancho del output
+    output_y = (image_row - (kernel_row / 2) * 2) + 1 #asigna el alto del output
    
-    output = np.zeros([int(output_y), int(output_x)]) 
+    output = np.zeros([int(output_y), int(output_x)]) #matriz donde se guarda el resultado
 
-    pad_height = int((kernel_row - 1) / 2) 
-    pad_width = int((kernel_col - 1) / 2)  
+    pad_height = int((kernel_row - 1) / 2) #asigna el alto del padding
+    pad_width = int((kernel_col - 1) / 2)  #asigna el ancho del pading
 
-    padded_image = np.zeros((image_row + (2 * pad_height), image_col + (2 * pad_width))) 
+    padded_image = np.zeros((image_row + (2 * pad_height), image_col + (2 * pad_width))) #matriz de imagen con paded en zeros
+
  
-    padded_image[pad_height:padded_image.shape[0] - pad_height, pad_width:padded_image.shape[1] - pad_width] = image 
+    padded_image[pad_height:padded_image.shape[0] - pad_height, pad_width:padded_image.shape[1] - pad_width] = image #matriz de imagen con paded
    
     for row in range(int(output_y)):
         for col in range(int(output_x)):
@@ -46,14 +49,17 @@ def convolution(image, kernel):
 
     return output
 
+
 if __name__ == '__main__':
 
+    #Matriz de imagen
     image = np.array([[1,2,3,4,5,6],
                      [7,8,9,10,11,12],
                      [0,0,1,16,17,18],
                      [0,1,0,7,23,24],
                      [1,7,6,5,4,3]])
 
+    #Matriz de Filtro
     filter = np.array([[1,1,1],
                       [0,0,0],
                       [2,10,3]])
