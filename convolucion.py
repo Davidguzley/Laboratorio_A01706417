@@ -54,20 +54,20 @@ def convolution(image, kernel):
 if __name__ == '__main__':
 
     #Se obtiene la imagen con cv2
-    image = cv2.imread("spiderman.jpg")
+    image = cv2.imread("spidermanNegro.jpg")
 
     #Se define la matriz del filtro
-    filter = np.array([[-1, 0, 1],
-                      [-2, 0, 2],
-                      [-1, 0, 1]])
+    filter = np.array([[-1, -1, -1],
+                      [-1, 8, -1],
+                      [-1, -1, -1]])
                       
     #Impresion de entradas y salidas
-    """print("Orignal Matrix:")
-    print(image)
+    plt.imshow(image, cmap='gray')
+    plt.title("Spiderman 3")
+    plt.show()
+
     print("Filter:")
     print(filter)
-    print("Valid Convolution:")
-    print(convolution(image,filter))"""
 
     #Mandamos a llamar la funcion
     convolution(image,filter)
