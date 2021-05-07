@@ -8,9 +8,9 @@ Para correr el programa es necesario lo siguiente:
 
 ### Pre-requisitos 📋
 
-_Tener una version reciente de Git.
+_Tener una version reciente de Git._
 
-_Contar con una version reciente de python con las siguientes librerias:
+_Contar con una version reciente de python con las siguientes librerias:_
 
 ```
 - NumPy
@@ -20,7 +20,7 @@ _Contar con una version reciente de python con las siguientes librerias:
 
 ### Instalación 🔧
 
-_Para clonar un repocitorio:
+_Para clonar un repocitorio:_
 
 1. En GitHub, visita la página principal del repositorio.
 2. Sobre la lista de archivos, da clic en (icono de bajar) Código.
@@ -32,7 +32,7 @@ _Para clonar un repocitorio:
 $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 ```
 
-_Para instalar una libreria:
+_Para instalar una libreria:_
 ```
 pip install 'libreria'
 ```
@@ -48,7 +48,7 @@ python padding.py
 ```
 ## Consideraciones  :pencil2:
 
-_- Si se desea utilizar otros parametros debera ser modificados lo parametos que se le pasa a las funciones desde el main de cada archivo.
+_- Si se desea utilizar otros parametros debera ser modificados lo parametos que se le pasa a las funciones desde el main de cada archivo._
 
 ## Construido con 🛠️
 
