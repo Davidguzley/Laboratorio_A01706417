@@ -39,7 +39,7 @@ pip install 'libreria'
 
 ## Corrrida 📦
 
-_Dependiendo de donde se corra el programa se utiliza el botón run o desde consola:_
+_Dependiendo de donde se corra el programa se utiliza el botón run de Visual Studio Code o desde consola:_
 ```
 python convolucion.py
 ```
