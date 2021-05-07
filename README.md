@@ -4,16 +4,13 @@ Dentro de este repositorio se encuentra en su mayoría archivos de Python con fu
 
 ## Comenzando 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
-
-Mira **Deployment** para conocer como desplegar el proyecto.
-
+Para correr el programa es necesario lo siguiente:
 
 ### Pre-requisitos 📋
 
-Tener una version reciente de Git.
+_Tener una version reciente de Git.
 
-Contar con una version reciente de python con las siguientes librerias:
+_Contar con una version reciente de python con las siguientes librerias:
 
 ```
 - NumPy
@@ -22,6 +19,8 @@ Contar con una version reciente de python con las siguientes librerias:
 ```
 
 ### Instalación 🔧
+
+_Para clonar un repocitorio:
 
 1. En GitHub, visita la página principal del repositorio.
 2. Sobre la lista de archivos, da clic en (icono de bajar) Código.
@@ -33,35 +32,41 @@ Contar con una version reciente de python con las siguientes librerias:
 $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 ```
 
+_Para instalar una libreria:
+```
+pip install 'libreria'
+```
 
-## Despliegue 📦
+## Corrrida 📦
 
-_Agrega notas adicionales sobre como hacer deploy_
+_Dependiendo de donde se corra el programa se utiliza el botón run o desde consola:_
+```
+python convolucion.py
+```
+```
+python padding.py
+```
+## Consideraciones  :pencil2:
+
+_- Si se desea utilizar otros parametros debera ser modificados lo parametos que se le pasa a las funciones desde el main de cada archivo.
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
+* [Visual Studio Code](https://code.visualstudio.com/) - Editor de texto
+* [Python](https://www.python.org/) - Lenguaje
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
+## Referencias 📖
 
-## Contribuyendo 🖇️
-
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
-## Wiki 📖
-
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
+[Convolution Examples](https://aishack.in/tutorials/image-convolution-examples/) <br>
+[Code from Abhisek Jana](https://github.com/adeveloperdiary/blog/tree/master/Computer_Vision/Sobel_Edge_Detection)
 
 ## Versionado 📌
 
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
+Se usó [Git](https://git-scm.com/) para el versionado. Dentro de los commits de este repocitorio se pueden ver cada una de las modificaciones realizadas.
 
 ## Autores ✒️
 
-* **David Guzmán Leyva A01706417** - *Trabajo en codigos de repocitorio* - [Davidguzley](https://github.com/Davidguzley)
-* * **Andrés Villanueva** - *Plantilla de README* - [villanuevand](https://github.com/villanuevand)
+* **David Guzmán Leyva A01706417** - [Davidguzley](https://github.com/Davidguzley)
 
 ## Expresiones de Gratitud 🎁
 
@@ -69,4 +74,4 @@ Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones
 * America Leyva Ramos (mamá) 👩‍🦰
 
 ---
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
+Plantilla de README.md por [Villanuevand](https://github.com/Villanuevand) 😊
