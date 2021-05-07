@@ -48,7 +48,7 @@ python padding.py
 ```
 ## Consideraciones  :pencil2:
 
-_- Si se desea utilizar otros parametros debera ser modificados lo parametos que se le pasa a las funciones desde el main de cada archivo._
+_- Si se desea utilizar otros parametros para las funciones, estos deberan ser modificados desde el main de cada archivo._
 
 ## Construido con 🛠️
 
